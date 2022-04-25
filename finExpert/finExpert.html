@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="finExpert.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body onload="">
+    <div class="flex_row social_div">
+        <p class="paragraph">Welcome to FinExpert, your expert in managing your finances!</p>
+        <div class="flex_row">
+            <div class=" social_icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class=" social_icon">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class=" social_icon">
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="flex_row height">
+        <a href="#" style="position: relative;bottom:20px">
+            <p style="display: inline-block; position:absolute; width:max-content">
+                <span style="font: 100 36px 'Roboto', sans-serif; color:rgb(84, 159, 245)">[</span>
+                <span style="font:900 36px 'Roboto',sans-serif;">Fin</span>
+            </p>
+            <p style="display: inline-block; position:absolute; left:56px;  width:max-content">
+                <span style="font: 100 36px 'Roboto', sans-serif;">Expert</span>
+                <span style="font: 100 36px 'Roboto', sans-serif; color:rgb(84, 159, 245)">]</span>
+            </p>
+        </a>
+        <div id="contact_div" class="flex_row">
+            <i class="far fa-clock blue_icon"></i>
+            <p><span>Mon - Sat: 9:00 - 18:00</span> <br>Sunday CLOSED</p>
+            <i class="fas fa-map-marker-alt blue_icon"></i>
+            <a href="#"><span>267 Park Avenue </span><br>New York, NY 90210</a>
+            <i class="fas fa-phone blue_icon"></i>
+            <a href="#"><span>(123) 45678910</span> <br>info@demolink.org</a>
+        </div>
+    </div>
+    <div id="navbar" class="flex_row">
+        <ul class="flex_row">
+            <li class="drop-down-container">
+                <a href="#" id="home"> home<i id="down" class="fas fa-chevron-down"></i></a>
+                <ul class="drop-down-content">
+                    <li><a href="#">Header Default</a></li>
+                    <li><a href="#">Footer Default</a></li>
+                    <li><a href="#">Header Light</a></li>
+                    <li><a href="#">Header Contrast</a></li>
+                    <li><a href="#">Footer Minimal</a></li>
+                    <li><a href="#">Footer Blog</a></li>
+                </ul>
+            </li>
+            <li class="drop-down-container">
+                <a href="#">About US<i id="down" class="fas fa-chevron-down"></i></a>
+                <ul class="drop-down-content">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Team member profile</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li class="drop-down-container">
+                <a href="#">Blogs<i id="down" class="fas fa-chevron-down"></i></a>
+                <ul class="drop-down-content">
+                    <li><a href="#">Blog Posts</a></li>
+                </ul>
+            </li>
+            <li class="drop-down-container">
+                <a href="#">Pages<i id="down" class="fas fa-chevron-down"></i></a>
+                <ul class="drop-down-content">
+                    <li class="drop-down-container">
+                        <a href="#">Elements<i id="down" class="fas fa-chevron-down"></i></a>
+                        <ul class="drop-down-content sub-drop-down-content">
+                            <li><a href="#">Header Default</a></li>
+                            <li><a href="#">Footer Default</a></li>
+                            <li><a href="#">Header Light</a></li>
+                            <li><a href="#">Header Contrast</a></li>
+                            <li><a href="#">Footer Minimal</a></li>
+                            <li><a href="#">Footer Blog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Coming soon </a></li>
+                    <li><a href="#">404 Page</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <a href="#" id="search_icon" class="flex_row" onclick="inpvis()"><i class="fas fa-search"></i></a>
+        <input id="nav-input" type="text" placeholder="search">
+    </div>
+    <div id="slide-sweep">
+        <button id="slide-botton" onclick="slide()">
+            <i class="fas fa-arrow-circle-left" style="font-size: 36px; opacity: 0.2; " ></i>
+        </button>
+        <div id="slide1" class="slider">
+            <div  class="slider-content">
+                <p>Solution that</p>
+                <p>never miss the aim</p>
+                <div><a href="#">Learn more</a></div>
+                <div><a href="#">Our services</a></div>
+            </div>
+        </div>
+        <div  id="slide2" class="slider">
+            <div  class="slider-content">
+                <p>Solution that</p>
+                <p>never miss the aim</p>
+                <div><a href="#">Learn more</a></div>
+                <div><a href="#">Our services</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="plans" class="flex_row">
+        <div>
+            <i class="fas fa-dollar-sign"></i>
+            <a href="#">Financial Planning</a>
+            <p>We'll help you make sensible decisions about money that can help you achieve your goals in life.</p>
+        </div>
+        <div>
+            <i class="fas fa-coffee"></i>
+            <a href="#">Retirement Planning</a>
+            <p>We'll help you make sensible decisions about money that can help you achieve your goals in life.</p>
+        </div>
+        <div>
+            <i class="fas fa-chart-bar"></i>
+            <a href="#">Risk Management</a>
+            <p>We'll help you make sensible decisions about money that can help you achieve your goals in life.</p>
+        </div>
+        <div>
+            <i class="fas fa-briefcase"></i>
+            <a href="#">Taxation</a>
+            <p>We'll help you make sensible decisions about money that can help you achieve your goals in life.</p>
+        </div>
+    </div>
+    <script src="finExpert.js"></script>
+</body>
+
+</html>

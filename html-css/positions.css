@@ -1,0 +1,36 @@
+*{
+    font-family: monospace;
+    margin: 0;
+}
+.floatLeft {
+    float: left;
+    /* margin:5px; */
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+   
+    /* border-radius: 10px; */
+}
+
+.floatLeft2 {
+    float: right;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 20px;
+}
+.floatRight {
+    float: right;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.divrow {
+    float: left;
+    padding: 20px;
+    width: 500px;
+}

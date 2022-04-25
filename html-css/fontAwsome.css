@@ -1,0 +1,142 @@
+body{
+    background-color: #fafafa;
+}
+*{
+    margin: 0px;
+    /* border: 1px solid red; */
+    padding: 0px;
+}
+#top_div{
+    background-color: #fafafa;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+#top_div *{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+#header_div{
+    background-color: #fafafa;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+#header_div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+   
+}
+#social_media_div a{
+    position: relative;
+}
+/* #header_div img:hover{
+    background-color: rgb(230, 24, 24);
+} */
+#fb_logo:hover{
+    content: url(files/fb-log-red.jpeg);
+}
+#twitter_logo:hover{
+    content: url(files/twitter-logo-red.jpeg);
+}
+#insta_logo:hover{
+    content: url(files/insta-logo-red.jpeg);
+}
+#header_div a{
+    margin: 10px;
+}
+#social_media_div{
+    position: absolute;
+    left: 50px;
+    top: 45%;
+}
+#logistica_a{
+    position: absolute;
+    left: 610px;
+    top: 45%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+#search_div{
+    position: absolute;
+    top: 45%;
+    left: 1150px
+}
+#nav_bar{
+    height: auto;
+    background-color: black;
+    display: flex;
+
+}
+#nav_bar ul{  
+    margin: auto;
+    text-align: center;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+   
+}
+#nav_bar li{  
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    padding: 20px;
+    border-bottom: 3px solid black;
+}
+#nav_bar li:hover{  
+    color: red;
+    border-bottom: 3px solid red;  
+}
+#search_div{
+    position: relative;
+    display: inline-block;
+    
+}
+#search_icon{
+    position:absolute ;
+    right: 0px !important;
+    left:10px;
+    top:0%;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 45px !important;
+    height: 45px !important;
+    border: none !important;
+}
+#dropdown{
+    position: relative;
+}
+#dropdown_content{
+    display: none;
+    width: auto;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    margin-top: 5px;
+}
+#dropdown_content li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    border: none;
+    display: block;
+    width: 200;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont;
+    font-size: 12px;
+}
+#dropdown:hover #dropdown_content{
+    display: block;
+}
+#dropdown_content a{
+    text-decoration: none;
+}
+#dropdown_content li:hover{
+    background-color: red;
+    color: white;
+}

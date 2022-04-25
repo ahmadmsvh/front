@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "nastaliq";
+    src: url("files/font/IranNastaliq.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nastaliq {
+    font-family: nastaliq, Tahoma, Geneva, sans-serif;
+}
+
+@font-face {
+    font-family: "yekan";
+    src: url("files/font/Yekan.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.yekan {
+    font-family: yekan, Tahoma, Geneva, sans-serif;
+}
+
+*{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    font-size: 16px;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: stretch;
+    margin: opx;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: -webkit-fill-available;
+}
+
+ul{
+    padding: 10px;
+    
+}
+
+a{
+    display: flex;
+    align-items: center;
+    width:max-content
+}
+
+.a_list{
+    justify-content: space-between;
+    width: inherit;
+}
+
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: stretch;  
+}
+
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin: 2px;
+}
+
+.flex_item{
+        max-height: inherit;
+}
+
+#headerdiv{
+    background-color: rgb(255, 255, 255); 
+    position: absolute;
+    display: block;
+    width: 100%;
+}
+
+#logodiv{
+    flex-direction: row-reverse;
+    flex: 100%;
+}
+
+#logodiv img{
+    max-height: 70px; 
+}
+
+#nav{
+    flex: 100%;
+}
+
+
+
+#teldiv :nth-child(1){
+    background-color: rgb(58, 57, 57);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dropdown_container{
+    position: relative;
+}
+.dropdown_content{
+    position: absolute;
+    top: 100%;
+    left: -125px;
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-top: solid 4px rgb(199, 174, 30)
+}
+
+.dropdown_content li{
+    border-bottom: solid 2px rgb(182, 179, 179);
+}
+
+.dropdown_content ul{
+    width: 250px;
+}
+.dropdown_container:hover .dropdown_content {
+    display: block;
+}
+
+a:hover{
+    color: rgb(199, 174, 30);
+}
+.drop_horiz_container{
+    position: relative
+}
+.drop_horiz_content{
+    position: absolute;
+    display: none;
+    background-color: white;
+    right: 100%;
+    top: 0px;
+    padding: 10px;
+    border-top: solid 4px rgb(199, 174, 30)
+}
+.drop_horiz_container:hover .drop_horiz_content{
+    display: block;
+}
+
+.mobile{
+    position: absolute;
+    display: none;
+    width: 100%; 
+}
+
+@media (max-width: 800px){
+    .mobile{
+        display: block;
+    }
+    #headerdiv{
+        display: none;
+    }
+    .flex_column{
+         
+        background-color: rgba(0, 0, 0, .1);
+    }
+    .dropdown_content{
+        
+        background-color: rgba(0, 0, 0, 0) ; 
+        padding: 10px;
+        border-top: 0px;
+    }
+}
+
+
+#mob_header{
+    background-color: rgb(255, 255, 255); 
+    max-width: 800px;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+

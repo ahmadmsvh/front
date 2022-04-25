@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calculator">
+        <div>
+            <p id="output-lcd"></p>
+            <p id="input-lcd" style="overflow:hidden;"></p>
+        </div>
+        <div id="bottons-div" class="flex-container">
+            <button class="botton" value="c" onclick="clean()">C</button>
+            <button class="botton" value="+" onclick="get_operator(value), get_botton(value)">+</button>
+            <button class="botton" value="-" onclick="get_operator(value),get_botton(value)">-</button>
+            <button class="botton" value=1 onclick="get_botton(value)">1</button>
+            <button class="botton" value=2 onclick="get_botton(value)">2</button>
+            <button class="botton" value=3 onclick="get_botton(value)">3</button>
+            <button class="botton" value=4 onclick="get_botton(value)">4</button>
+            <button class="botton" value=5 onclick="get_botton(value)">5</button>
+            <button class="botton" value=6 onclick="get_botton(value)">6</button>
+            <button class="botton" value=7 onclick="get_botton(value)">7</button>
+            <button class="botton" value=8 onclick="get_botton(value)">8</button>
+            <button class="botton" value=9 onclick="get_botton(value)">9</button>
+            <button class="botton" value="x" onclick="get_operator(value),get_botton(value)">x</button>
+            <button class="botton" value=0 onclick="get_botton(value)">0</button>
+            <button class="botton" value="." onclick="get_botton(value)">.</button>
+            <button class="botton" value="/" onclick="get_operator(value),get_botton(value)">/</button>
+            <button class="botton" value="=" onclick="get_operator(value)">=</button>
+            <button class="botton" value="%" onclick="get_operator(value)">%</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

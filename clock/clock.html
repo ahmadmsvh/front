@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="fontawsome/all.css">
+    <script src="https://kit.fontawesome.com/6fdb980b0d.js" crossorigin="anonymous"></script>
+    <script src="fontawsome/all.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class=flex-box id=clock>
+        <div id=frame class="flex-box">
+            <div id=hhandle></div>
+            <div id=mhandle></div>
+            <div id=shandle></div>
+        </div> 
+        <form action="/action_page.php" style="display: flex; flex-direction: column; width: 100px">
+            <label for="hours">hour</label>
+            <input type="number" id="hours" name="hours" min="0" max="24">
+            <label for="minutes">minute</label>
+            <input type="number" id="minutes" name="minutes" min="0" max="60">
+            <label for="seconds">second</label>
+            <input type="number" id="seconds" name="seconds" min="0" max="60">
+          </form>
+    </div>
+    
+      
+
+       
+    <script src="clock.js"></script>
+</body>
+</html>

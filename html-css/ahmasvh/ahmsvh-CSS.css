@@ -1,0 +1,228 @@
+*{
+    /* border: solid 3px black; */
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0px !important; 
+}
+
+#my_header{
+    height: 70px;
+    background-color: rgb(26, 141, 60);
+    position: relative;
+    
+    }
+
+#social_icons{
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+#social_icons ul,li,a{
+    display: inline-block;
+    padding: 0%;
+    margin: 0px;
+    padding: 5px 10px;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#social_icons a:hover {
+    border-bottom: solid 4px red;
+    color: rgb(0, 0, 0);
+}
+#search_box{
+    width: 20%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0 , -50%);
+}
+
+#search_box input{
+    background-color: rgb(82, 224, 158);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+#search_box button{
+    background-color: rgb(26, 141, 60);
+    border: none;
+    color: aliceblue;
+}
+
+#main_menu{
+    width: auto;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    padding: 10px;
+    transform: translate(0 , -50%);
+    color: aliceblue;
+    z-index: 1;
+}
+
+#main_menu_dropdown_content{
+    position: absolute;
+    display: none;
+    right: 0px;
+    top: 0px;
+    margin: 40px 0px 0px 0px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    
+    
+}
+
+#main_menu:hover #main_menu_dropdown_content {
+    display: block;
+    z-index: 2;
+}
+
+#main_menu_dropdown_content ul{
+    width: 200px;
+    padding: 5px;
+}  
+
+#main_menu_dropdown_content li{
+    display: block;
+    border-bottom: solid 3px white;   
+}  
+#main_menu_dropdown_content li:hover{
+    border-bottom: solid 4px red;
+    color: rgb(255, 255, 255);
+    /* box-shadow: 10px 10px 10px  red; */
+}
+#main_menu_dropdown_content  a{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+}
+
+#title{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title:hover {
+    border-bottom: solid 4px red;
+    color: rgb(0, 0, 0);
+    
+}
+
+#navigation{
+    position: relative;
+    background-color: rgb(113, 223, 99);
+    height: 70px;
+}
+
+
+
+
+
+
+
+#navigation ul{
+    marker: none;
+    display: inline-block;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}    
+
+#navigation a{
+    
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding: 0px;  
+    
+}
+
+#navigation li{
+    marker: none;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: x-large;
+    padding: 0px 30px 0px 30px;
+    
+}
+
+#navigation li:hover a{
+    color: aliceblue;
+}
+
+#navigation li:hover{
+    background-color: black;
+    border-bottom: solid 4px red;
+}
+
+
+
+
+
+
+#animate{
+    height: 300px;
+    background-color: rgb(17, 88, 88);
+}
+
+
+
+
+
+
+
+#main{
+    height: 400px;
+    background-color: rgb(25, 138, 68);
+    position: relative;
+    left: 0px;
+}
+
+#left_side{
+    width: 20%;
+    height: 400px;
+    position: absolute;
+    margin: 0px 30px;
+    left: 0;
+    background-color: rgb(184, 174, 194);
+}
+
+#middle{
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    margin: 0px 30px;
+    left: 22%;
+    background-color: rgb(184, 174, 194);
+}
+
+#right_side{
+    width: 20%;
+    height: 400px;
+    position: absolute;
+    margin: 0px 30px;
+    left:74%;
+    background-color: rgb(184, 174, 194);
+}
+
+#my_footer{
+    height: 200px;
+    background-color: rgb(240, 243, 37);
+}

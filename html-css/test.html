@@ -1,0 +1,358 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #coin{
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        #head{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url(files/kisspng-5-cent-euro-coin-1-cent-euro-coin-german-euro-coin-20-cent-euro-coin-5b106ba10e28e3.149348921527802785058.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            
+        }
+        #tail{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url(files/kisspng-1-cent-euro-coin-two-pence-penny-5-cent-euro-coin-5ae4d2a2dd7681.8807511215249455709071.png);
+            backface-visibility: hidden;
+            background-repeat: no-repeat;
+            background-size: contain;  
+            background-size: contain;
+        }
+        .flip{
+            transition: all 5s;
+        }
+        .flex-column{
+            display: flex;
+            height: 64%;
+            min-height: 300px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color: rgb(168, 158, 177);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-column">
+        <div id="coin">
+            <div id="head" class="flip"></div>
+            <div id="tail" class="flip"></div>
+        </div>
+        <button type="button" style="width: 100px;margin-top: 50px;" onclick="flip_coin()" >flip coin</button>
+    </div>
+
+    <script>
+        function flip_coin(){
+            var rand = Math.random();
+            console.log(rand);
+            document.getElementById("head").style.transitionDuration = "0s";
+            document.getElementById("tail").style.transitionDuration = "0s";
+            document.getElementById("coin").style.transitionDuration = "0s";
+            document.getElementById("head").style.transform = "rotateX(0deg)";
+            document.getElementById("tail").style.transform = "rotateX(0deg)";
+            document.getElementById("coin").style.transform = "rotate(0deg)";
+            setTimeout(function(){
+                document.getElementById("head").style.transitionDuration = "5s";
+                document.getElementById("tail").style.transitionDuration = "5s";
+                document.getElementById("coin").style.transitionDuration = "5s";
+            },1);
+            setTimeout(function(){
+                if(rand > 0.5){
+                    document.getElementById("head").style.transform = "rotateX(3600deg)";
+                    document.getElementById("tail").style.transform = "rotateX(3600deg)";
+                    document.getElementById("coin").style.transform = "rotate(3600deg)";
+                }
+                else{
+                    document.getElementById("head").style.transform = "rotateX(3780deg)";
+                    document.getElementById("tail").style.transform = "rotateX(3780deg)";
+                    document.getElementById("coin").style.transform = "rotate(3780deg)";
+
+                }
+                console.log(document.getElementById("tail").style.transitionDuration);
+            },2);
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #coin{
+            position: relative;
+        }
+        #head{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            visibility: hidden;
+            background-image: url(files/kisspng-5-cent-euro-coin-1-cent-euro-coin-german-euro-coin-20-cent-euro-coin-5b106ba10e28e3.149348921527802785058.png);
+            background-size: 100%;
+            animation-name: flipcoin3; 
+            animation-fill-mode: both;
+            animation-duration: 0.6s;
+            animation-iteration-count: 10;
+
+        }
+        #tail{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image:url(files/kisspng-1-cent-euro-coin-two-pence-penny-5-cent-euro-coin-5ae4d2a2dd7681.8807511215249455709071.png) ;
+            background-size: 100%;
+            animation-name: flipcoin4;
+            animation-fill-mode: both;
+            animation-duration: 0.6s;
+            animation-iteration-count: 10;
+        }
+        @keyframes flipcoin3{
+            0%{
+                visibility: hidden;
+                transform: rotateX(180deg);
+            }
+            25%{
+                visibility: hidden;
+                transform: rotateX(270deg);
+            }
+            50%{
+                visibility: hidden;
+                transform: rotateX(360deg);
+            }
+            75%{
+                visibility: visible;
+                transform: rotateX(450deg);
+            }
+            100%{
+                visibility: visible;
+                transform: rotateX(540deg);
+            }
+        }
+        @keyframes flipcoin4{
+            0%{
+                visibility: visible;
+                transform: rotateX(180deg);
+            }
+            25%{
+                visibility: visible;
+                transform: rotateX(270deg);
+            }
+            50%{
+                visibility: visible;
+                transform: rotateX(360deg);
+            }
+            75%{
+                visibility: hidden;
+                transform: rotateX(450deg);
+            }
+            100%{
+                visibility: hidden;
+                transform: rotateX(540deg);
+            }
+            
+        }
+        @keyframes flipcoin1{
+            0%{
+                visibility: hidden;
+                transform: rotateX(0deg);
+            }
+            25%{
+                visibility: visible;
+                transform: rotateX(90deg);
+            }
+            50%{
+                visibility: visible;
+                transform: rotateX(180deg);
+            }
+            75%{
+                visibility: visible;
+                transform: rotateX(270deg);
+            }
+            100%{
+                visibility: hidden;
+                transform: rotateX(360deg);
+            }
+        }
+        @keyframes flipcoin2{
+            0%{
+                visibility: visible;
+                transform: rotateX(0deg);
+            }
+            25%{
+                visibility: hidden;
+                transform: rotateX(90deg);
+            }
+            50%{
+                visibility: hidden;
+                transform: rotateX(180deg);
+            }
+            75%{
+                visibility: hidden;
+                transform: rotateX(270deg);
+            }
+            100%{
+                visibility: visible;
+                transform: rotateX(360deg);
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="coin" onclick="flipcoin()">
+        <div id = "head" ></div>
+        <div id = "tail" ></div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html> -->
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div id="top_menu">
+        <a href="#"><img src="/html-css/files/twitter-logo.jpeg" alt=""></a>
+        <ul>
+            <li>HOME</li>
+            <li>PROJECTS</li>
+            <li>TUTORIALS</li>
+            <li>REFERENCES</li>
+        </ul>
+        <a href="#">PURCHASE</a>
+    </div>
+    
+    <script src="test.js"></script>
+</body>
+</html> -->
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <div id="mydiv" onmouseover="changeColor()"   style="height: 200px; background-color:red">
+    </div>
+    <div id="my2div" onkeydown="changeColor()"  style="height: 300px;">
+
+    </div>
+    <script>
+        var i = 0;
+        function changeColor(){
+            if (i % 2 == 1){
+                document.getElementById("my2div").style.backgroundColor = "purple";
+                document.getElementById("mydiv").style.height = "100px"
+                i++
+            }
+            else{
+                document.getElementById("my2div").style.backgroundColor = "blue";
+                document.getElementById("mydiv").style.height = "300px"
+                i++
+            }
+            
+        }
+        
+        
+        //x += "; width: 200px";
+        //document.getElementById("mydiv").style = x;
+
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="enter a number">
+    <br>
+    <button type="button" onclick="myfunction()">execute</button>
+    <p id="result"></p>
+    
+    <script>
+        function myfunction(){
+            var num = document.getElementById("num1").value
+            var result = 0
+            for (let i = 1; i < num; i+=2){
+                result += i
+            }
+            document.getElementById("result").innerHTML = result
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="enter a number">
+    <br>
+    <input type="number" id="num2" placeholder="enter a number">
+    <button type="button" onclick="myfunction()">execute</button>
+    <p id="result"></p>
+
+    <script>
+        function myfunction(){
+            var n1 = document.getElementById("num1").value;
+            var n2 = document.getElementById("num2").value;
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            
+            var result =""
+
+            for (let i = n1+1; i < n2; i++){
+                result += "<span> <span>"+i
+            }
+            document.getElementById("result").innerHTML = result; 
+        }
+    </script>
+
+</body>
+</html> -->

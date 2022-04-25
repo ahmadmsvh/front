@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #coin{
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        #head{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url(files/kisspng-5-cent-euro-coin-1-cent-euro-coin-german-euro-coin-20-cent-euro-coin-5b106ba10e28e3.149348921527802785058.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            perspective: 100px;
+        }
+        #tail{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url(files/kisspng-1-cent-euro-coin-two-pence-penny-5-cent-euro-coin-5ae4d2a2dd7681.8807511215249455709071.png);
+            backface-visibility: hidden;
+            background-repeat: no-repeat;
+            background-size: contain;  
+            background-size: contain;
+            perspective: 100px;
+        }
+        .flip{
+            transition: all 5s;
+        }
+        .flex-column{
+            display: flex;
+            height: 64%;
+            min-height: 300px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color: rgb(168, 158, 177);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-column">
+        <div id="coin">
+            <div id="head" class="flip"></div>
+            <div id="tail" class="flip"></div>
+        </div>
+        <button type="button" style="width: 100px;margin-top: 50px;" onclick="flip_coin()" >flip coin</button>
+    </div>
+
+    <script>
+        function flip_coin(){
+            var rand = Math.random();
+            console.log(rand);
+            document.getElementById("head").style.transitionDuration = "0s";
+            document.getElementById("tail").style.transitionDuration = "0s";
+            
+            document.getElementById("head").style.transform = "rotateX(0deg)";
+            document.getElementById("tail").style.transform = "rotateX(0deg)";
+
+            setTimeout(function(){
+                    document.getElementById("head").style.transitionDuration = "5s";
+                    document.getElementById("tail").style.transitionDuration = "5s";            
+            },1);
+            setTimeout(function(){
+                if(rand > 0.5){
+                    document.getElementById("head").style.transform = "rotateX(3600deg)";
+                    document.getElementById("tail").style.transform = "rotateX(3600deg)";                    
+                }
+                else{
+                    document.getElementById("head").style.transform = "rotateX(3780deg)";
+                    document.getElementById("tail").style.transform = "rotateX(3780deg)";
+                }
+            },2);
+        }
+    </script>
+</body>
+</html>

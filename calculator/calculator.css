@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to bottom right ,rgb(162, 185, 247),rgb(191, 112, 248),rgb(50, 235, 248));
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#calculator{ 
+    width: 250px;
+    height: 480px;
+    background-color: blueviolet;
+    box-shadow: -10px -10px 20px 10px rgb(68 10 92) inset;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#output-lcd{
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0,0.2);
+    padding: 10px;
+    height: 30px;
+    color: aliceblue;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0) inset;
+}
+#input-lcd{
+    padding: 10px;
+    height: 20px;
+    color: aliceblue;
+}
+.botton{
+    flex-basis: 50px;
+    padding: 14px;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+    background-color: rgb(89, 19, 146);
+    color: aliceblue;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    border: none;
+}
